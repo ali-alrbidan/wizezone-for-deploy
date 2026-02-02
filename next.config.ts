@@ -1,24 +1,9 @@
+import type { NextConfig } from "next";
 
-
-const nextConfig = {
-    reactStrictMode: true,
+const nextConfig: NextConfig = {
   images: {
-  remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**', // Allow all images for now
-      },
-    ],
+    domains: ['localhost'], // بدون http:// أو port
   },
-    // Add trailing slash for better compatibility
-  trailingSlash: false,
-  
-  // Skip type checking during build (if needed)
-  typescript: {
-    ignoreBuildErrors: false,
-  },
-  
-
 };
 
-module.exports = nextConfig
+export default nextConfig;
