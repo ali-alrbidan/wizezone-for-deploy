@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 
 import { motion } from "framer-motion";
 import { itemVariants, lineVariants } from "../variants";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { News } from "../types";
 
 type NewsUI = {
   id: number;
@@ -25,7 +26,7 @@ function NewsCard({
 }) {
   const t = useTranslations("NewsSection");
   const isOpen = openId === item.id;
-
+  const local = useLocale();
   return (
     <motion.div
       initial={{ opacity: 0, x: 20, rotateY: 45 }}
@@ -42,7 +43,6 @@ function NewsCard({
         ${isOpen ? "shadow-lg dark:shadow-slate-700/10" : ""}
       `}
     >
-      {/* header */}
       <div className="flex items-start justify-between gap-4">
         <div className="flex-1">
           <p className="text-gray-600 dark:text-gray-400 text-sm mb-1">
@@ -131,7 +131,7 @@ function NewsCardSkeleton() {
 
 export default function NewsSection() {
   const t = useTranslations("NewsSection");
-
+  const local = useLocale();
   const [openId, setOpenId] = useState<number | null>(null);
   const [newsList, setNewsList] = useState<NewsUI[]>([]);
   const [loading, setLoading] = useState(true);
@@ -141,13 +141,16 @@ export default function NewsSection() {
       try {
         const response = await fetch("/api/news");
         const data = await response.json();
-
-        const mappedNews: NewsUI[] = data.map((n: any, index: number) => ({
-          id: n.Order || index + 1,
-          module: "News",
-          date: n.CreatedDate || "Coming Soon",
-          title: n.TitleEn || "Untitled",
-          content: n.ShortDescriptionEn || "No content available.",
+        console.log(data);
+        const mappedNews: NewsUI[] = data.map((n: News, index: number) => ({
+          id: n.Id || index + 1,
+          module: local === "ar" ? "أخبار" : "News",
+          date: n.CreatedAt || "Coming Soon",
+          title: local === "ar" ? n.TitleAr : n.TitleEn || "Untitled",
+          content:
+            local === "ar"
+              ? n.ShortDescriptionAr
+              : n.ShortDescriptionEn || "No content available.",
         }));
 
         setNewsList(mappedNews);

@@ -11,6 +11,7 @@ import { useTheme } from "next-themes";
 import { itemVariants, lineVariants } from "../variants";
 import { useTranslations, useLocale } from "next-intl";
 import { Partner } from "../types";
+import Image from "next/image";
 //#endregion
 
 export default function PartnersSlider() {
@@ -229,40 +230,35 @@ function PartnerCard({ item, index }: { item: Partner; index: number }) {
       `}
     >
       {/* Logo Wrapper */}
+
       <motion.div
         whileHover={{ scale: 1.05 }}
         transition={{ type: "spring", stiffness: 400 }}
         className={`
-          relative
-          flex items-center justify-center
-          h-24 w-full
-          rounded-xl
-          p-4
-          z-10
-          ${
-            isDark
-              ? "bg-zinc-800/30 backdrop-blur-sm"
-              : "bg-zinc-50 backdrop-blur-sm"
-          }
-          ${isDark ? "" : "border border-gray-100"}
-        `}
+    relative
+    flex items-center justify-center
+    h-24 w-full
+    rounded-xl
+    p-4
+    z-10
+    ${
+      isDark ? "bg-zinc-800/30 backdrop-blur-sm" : "bg-zinc-50 backdrop-blur-sm"
+    }
+    ${isDark ? "" : "border border-gray-100"}
+  `}
       >
-        <motion.img
-          src={item.LogoUrl}
-          alt={name}
-          initial={{ scale: 0.9, opacity: 0.8 }}
-          animate={{ scale: 1, opacity: 1 }}
-          whileHover={{ scale: 1.15 }}
-          transition={{ duration: 0.3 }}
-          className={`
-            max-h-20
-            max-w-[170px]
-            object-contain
-            relative z-10
-            ${isDark ? "" : "filter brightness(0.9) contrast(1.1)"}
-            `}
-          loading="lazy"
-        />
+        <div className="relative h-20 w-full flex items-center justify-center">
+          <Image
+            src={item.LogoUrl}
+            alt={item.NameEn}
+            fill
+            sizes="(max-width: 768px) 100px, 170px"
+            className="object-contain"
+            onError={(e) => {
+              console.error("Image load error:", e);
+            }}
+          />
+        </div>
       </motion.div>
 
       {/* Text Content */}

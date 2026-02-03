@@ -32,6 +32,7 @@ export type News = {
 
     TitleAr: string;
     TitleEn: string;
+    CreatedAt:  string;
 
     ShortDescriptionAr: string;
     ShortDescriptionEn: string;

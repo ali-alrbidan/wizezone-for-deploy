@@ -1,6 +1,7 @@
 "use client";
 import { motion, Variants } from "framer-motion";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export default function WhyChooseUs() {
   const t = useTranslations("WhyChooseUs");
@@ -104,7 +105,9 @@ export default function WhyChooseUs() {
                     boxShadow: "inset 0px 4px 4px rgba(255, 255, 255, 0.25)",
                   }}
                 >
-                  <img
+                  <Image
+                    width={200}
+                    height={200}
                     src="/commit.png"
                     alt="Commitment"
                     className="w-28 h-28 object-contain"
@@ -167,7 +170,9 @@ export default function WhyChooseUs() {
                     boxShadow: "inset 0px 4px 4px rgba(255, 255, 255, 0.25)",
                   }}
                 >
-                  <img
+                  <Image
+                    width={200}
+                    height={200}
                     src="/customizee.png"
                     alt="Commitment"
                     className="w-28 h-28 object-contain"
@@ -230,7 +235,9 @@ export default function WhyChooseUs() {
                     boxShadow: "inset 0px 4px 4px rgba(255, 255, 255, 0.25)",
                   }}
                 >
-                  <img
+                  <Image
+                    width={200}
+                    height={200}
                     src="/yy.png"
                     alt="Commitment"
                     className="w-28 h-28 object-contain"
@@ -292,7 +299,9 @@ export default function WhyChooseUs() {
                     boxShadow: "inset 0px 4px 4px rgba(255, 255, 255, 0.25)",
                   }}
                 >
-                  <img
+                  <Image
+                    width={200}
+                    height={200}
                     src="/sustainable.png"
                     alt="Commitment"
                     className="w-28 h-28 object-contain"

@@ -5,6 +5,14 @@ import { itemVariants, lineVariants } from "../variants";
 import { useEffect, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Gallery } from "../types";
+import Image from "next/image";
+import {
+  ArrowLeft,
+  ChevronLeft,
+  ChevronLeftIcon,
+  ChevronRight,
+  SquareChevronLeftIcon,
+} from "lucide-react";
 
 export default function GallerySection() {
   const t = useTranslations("GallerySection");
@@ -116,7 +124,6 @@ export default function GallerySection() {
                 shadow-lg dark:shadow-slate-700/5
               "
             >
-              {/* Image */}
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
@@ -125,9 +132,11 @@ export default function GallerySection() {
                   overflow-hidden rounded-xl bg-gray-100 dark:bg-white/10
                 "
               >
-                <img
+                <Image
                   src={item.ImageUrl}
-                  alt={locale === "ar" ? item.TitleAr : item.TitleEn}
+                  alt={item.TitleEn}
+                  width={400}
+                  height={400}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </motion.div>
@@ -162,11 +171,7 @@ export default function GallerySection() {
                 >
                   <span>{t("viewDetails")}</span>
                   <motion.svg
-                    xmlns="http://www.w3.org/2000/svg"
                     className="h-4 w-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
                     animate={{ x: [0, 5, 0] }}
                     transition={{
                       repeat: Infinity,
@@ -174,12 +179,7 @@ export default function GallerySection() {
                       repeatDelay: 1,
                     }}
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
+                    {locale === "ar" ? <ChevronLeft /> : <ChevronRight />}
                   </motion.svg>
                 </motion.div>
               </div>
