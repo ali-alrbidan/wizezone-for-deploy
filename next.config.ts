@@ -2,18 +2,7 @@
 
 const nextConfig = {
     reactStrictMode: true,
-      async rewrites() {
-    return [
-      {
-        source: '/api/news/:path*',
-        destination: 'http://147.93.120.97:5000/api/News/:path*',
-      },
-      {
-        source: '/api/:path*',
-        destination: 'http://147.93.120.97:5000/api/:path*',
-      },
-    ];
-  },
+
   images: {
   remotePatterns: [
       {
