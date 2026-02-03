@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { NewsService } from "@/services/api/news.service";
+
 import { motion } from "framer-motion";
 import { itemVariants, lineVariants } from "../variants";
 
@@ -135,9 +135,10 @@ export default function NewsSection() {
   useEffect(() => {
     async function loadNews() {
       try {
-        const rawNews = await NewsService.getAll();
+        const response = await fetch("/api/news");
+        const data = await response.json();
 
-        const mappedNews: NewsUI[] = rawNews.map((n: any, index: number) => ({
+        const mappedNews: NewsUI[] = data.map((n: any, index: number) => ({
           id: n.Order || index + 1,
           module: "News",
           date: n.CreatedDate || "Coming Soon",

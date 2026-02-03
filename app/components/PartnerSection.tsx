@@ -5,10 +5,11 @@ import { useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-auto-scroll";
 import { usePartners } from "@/hooks/partners/usePartners";
-import type { Partner } from "@/services/api/partners.service";
+
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import { itemVariants, lineVariants } from "../variants";
+import { Partner } from "../types";
 //#endregion
 
 export default function PartnersSlider() {

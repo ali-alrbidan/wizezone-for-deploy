@@ -1,9 +1,9 @@
 "use client";
 
-import { Gallery, GalleryService } from "@/services/api/Gallery.service";
 import { motion } from "framer-motion";
 import { itemVariants, lineVariants } from "../variants";
 import { useEffect, useState } from "react";
+import { Gallery } from "../types";
 
 export default function GallerySection() {
   const [gallery, setGallery] = useState<Gallery[]>();
@@ -12,7 +12,10 @@ export default function GallerySection() {
   useEffect(() => {
     const fetchGallery = async () => {
       try {
-        const data = await GalleryService.getAll();
+        const response = await fetch("/api/gallery");
+        const data = await response.json();
+        console.log(response);
+        console.log(data);
 
         setGallery(data);
       } catch (error) {

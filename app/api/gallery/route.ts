@@ -2,7 +2,7 @@ import { NextRequest } from "next/server";
 
 export async function GET(request:NextRequest) {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/news`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/gallery`, {
       headers: {
         'Content-Type': 'application/json',
       },
@@ -17,7 +17,7 @@ export async function GET(request:NextRequest) {
     return Response.json(data);
   } catch (error) {
     return Response.json(
-      { error: 'Failed to fetch news' },
+      { error: 'Failed to fetch gallery' },
       { status: 500 }
     );
   }

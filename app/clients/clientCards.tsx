@@ -1,14 +1,16 @@
 "use client";
-import { ClientApi, ClientsService } from "@/services/api/clients.service";
+
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { ClientApi } from "../types";
 export default function ClientsCard() {
   const [clients, setClients] = useState<ClientApi[]>();
   useEffect(() => {
     async function getClients() {
-      const clients = await ClientsService.getAll();
-      setClients(clients);
+      const response = await fetch("/api/clients");
+      const data = await response.json();
+      setClients(data);
     }
     getClients();
   }, []);
