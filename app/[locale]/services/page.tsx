@@ -137,7 +137,7 @@ export default function MainOurService() {
               transition={{ duration: 1.2, ease: "easeOut" }}
             >
               <Image
-                src="/services.png"
+                src="/Services.png"
                 alt="Services"
                 fill
                 className="object-cover"

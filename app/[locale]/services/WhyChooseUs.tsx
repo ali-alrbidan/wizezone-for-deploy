@@ -173,7 +173,7 @@ export default function WhyChooseUs() {
                   <Image
                     width={200}
                     height={200}
-                    src="/customizee.png"
+                    src="/Customizee.png"
                     alt="Commitment"
                     className="w-28 h-28 object-contain"
                   />
