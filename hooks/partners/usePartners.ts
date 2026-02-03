@@ -1,7 +1,7 @@
 // // hooks/usePartners.ts (or wherever your hook is)
 "use client";
 
-import { Partner } from "@/app/types";
+import { Partner } from "@/app/[locale]/types";
 import { useEffect, useState } from "react";
 
 
