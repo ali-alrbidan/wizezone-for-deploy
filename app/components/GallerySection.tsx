@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { itemVariants, lineVariants } from "../variants";
 import { useEffect, useState } from "react";
 import { Gallery } from "../types";
+import Image from "next/image";
 
 export default function GallerySection() {
   const [gallery, setGallery] = useState<Gallery[]>();
@@ -122,9 +123,11 @@ export default function GallerySection() {
                   overflow-hidden rounded-xl bg-gray-100 dark:bg-white/10
                 "
               >
-                <img
+                <Image
                   src={item.ImageUrl}
                   alt={item.TitleEn}
+                  width={400}
+                  height={400}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </motion.div>

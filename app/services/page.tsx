@@ -196,6 +196,7 @@
 // }
 
 "use client";
+import Image from "next/image";
 import { HowWeWorkSection } from "./HowWeWork";
 import { ProofOfCredibilitySection } from "./ProofOfCredibilitySection";
 import { ServiceCard } from "./ServiceCard";
@@ -325,13 +326,20 @@ export default function MainOurService() {
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           >
-            <motion.img
+            {/* <motion.img
               src="/services.png"
               alt="Services"
               className="w-full h-full object-cover rounded-xl -mt-20"
               initial={{ scale: 1.1 }}
               whileInView={{ scale: 1 }}
               transition={{ duration: 1.2, ease: "easeOut" }}
+            /> */}
+            <Image
+              width={200}
+              height={200}
+              src="/services.png"
+              alt="Services"
+              className="w-full h-full object-cover rounded-xl -mt-20"
             />
             {/* Subtle gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent rounded-xl" />
