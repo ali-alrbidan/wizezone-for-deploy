@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import { itemVariants, lineVariants } from "../variants";
 import { Partner } from "../types";
+import Image from "next/image";
 //#endregion
 
 export default function PartnersSlider() {
@@ -255,6 +256,7 @@ function PartnerCard({ item, index }: { item: Partner; index: number }) {
             `}
           loading="lazy"
         />
+        <Image src={item.LogoUrl} alt="logo" width={300} height={200} />
       </motion.div>
 
       {/* Text Content */}
