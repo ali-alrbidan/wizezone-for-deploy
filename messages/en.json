@@ -1,0 +1,326 @@
+{
+  "AboutPage": {
+    "hero": {
+      "title": "About Wise Zone",
+      "description": "We are a consulting and training firm dedicated to empowering organizations through clarity, expertise, and practical development."
+    },
+    "whoWeAre": {
+      "title": "Who We Are",
+      "description1": "Wise Zone partners with organizations seeking clarity, capability development, and sustainable improvement in an increasingly complex environment.",
+      "description2": "Through expert-led consulting and training, we help leaders and teams address real challenges with confidence and direction.",
+      "role": {
+        "title": "Our Role",
+        "description": "We help organizations move from uncertainty to clarity, and from intention to effective action — through consulting and training that respects context, people, and purpose."
+      }
+    },
+    "philosophy": {
+      "title": "Our Philosophy",
+      "subtitle": "The principles that guide how we think, advise, and train.",
+      "items": {
+        "clarity": {
+          "title": "Clarity Before Action",
+          "text": "Effective decisions begin with a clear understanding of challenges and context."
+        },
+        "people": {
+          "title": "People-Centered Development",
+          "text": "Sustainable change happens when people are enabled, not instructed."
+        },
+        "practical": {
+          "title": "Practical Over Theoretical",
+          "text": "Knowledge has value only when it can be applied in real situations."
+        }
+      }
+    },
+    "approach": {
+      "title": "Our Approach",
+      "description": "Our work begins with understanding context, continues through tailored guidance, and focuses on creating impact that extends well beyond engagement timelines."
+    },
+    "whyItMatters": {
+      "title": "Why It Matters",
+      "description1": "Organizations don’t need more information. They need clarity, alignment, and the ability to act with confidence.",
+      "description2": "Our role is to bridge the gap between insight and execution through consulting and training that creates lasting value.",
+      "commitment": {
+        "title": "Our Commitment",
+        "description": "We commit to thoughtful engagement, honest guidance, and partnerships built on trust, credibility, and long-term impact."
+      }
+    },
+    "cta": {
+      "title": "Let’s Start with a Conversation",
+      "description": "If you’d like to learn more about how we think and work, we’d be glad to connect.",
+      "button": "Contact Us"
+    }
+  },
+  "MainClientPage": {
+    "title": "Our Clients",
+    "description": "We work with organizations that value clarity, expertise, and meaningful development across diverse sectors."
+  },
+  "AboutSection": {
+    "title": "About Us",
+    "history": "WISE ZONE was founded in 2016 in Amman. To start serving both locally and internationally in a wide range of training areas.",
+    "vision": {
+      "title": "Vision",
+      "description": "To contribute in the regional and international educational and business progress by being a supportive partner ready to serve both timely and qualitatively in all over MENA region."
+    },
+    "mission": {
+      "title": "Mission",
+      "description": "To allocate all our resources to turn challenges into opportunities through the best-fit instructors, knowledge, & technology, in ways that will add value to our clients, meeting their satisfaction, and saturating their needs; and build long relationship as business partner while maintaining our edge of Excellence."
+    }
+  },
+  "ContactSection": {
+    "left": {
+      "company": "Wise Zone",
+      "subtitle": "Wise Zone Training And Consulting",
+      "address": "Amman-Al jubiha-yajouz St. Building #67 – P.Box : 2722 – Amman, Jordan : 11953"
+    },
+    "right": {
+      "title": "Let’s Discuss Your Needs",
+      "description": "Let’s align our constellations! Reach out and let the magic of collaboration illuminate our skies.",
+      "form": {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "subject": "Subject",
+        "message": "Message",
+        "submit": "Send it to Us"
+      }
+    }
+  },
+  "Footer": {
+    "rights": "All Rights Reserved to WiseZone",
+    "developedBy": "Developed by Yanal Albarghouthi"
+  },
+  "GallerySection": {
+    "title": "Our Gallery",
+    "description": "Glimpses of our journey in developing skills and creating success.",
+    "viewDetails": "View Details"
+  },
+  "HeroSection": {
+    "words": {
+      "welcome": "Welcome",
+      "to": "to",
+      "wise": "Wise",
+      "zone": "Zone"
+    },
+    "description": {
+      "part_one": "The training and consulting platform that opens the doors to professional success for you.",
+      "part_two": "We help you acquire the skills that make a difference in your career."
+    },
+    "cta": "Start Your Journey",
+    "trust": "Learn. Grow. Lead With Trusted Training & Consulting"
+  },
+  "Navbar": {
+    "links": {
+      "home": "Home",
+      "services": "Services",
+      "courses": "Courses",
+      "clients": "Clients",
+      "about": "About Us",
+      "trainingPolicy": "Training Policy"
+    },
+    "aria": {
+      "toggleLanguage": "Toggle language",
+      "toggleTheme": "Toggle theme",
+      "search": "Search",
+      "toggleMenu": "Toggle mobile menu"
+    }
+  },
+  "NewsSection": {
+    "title": "Our News",
+    "description": "WiseZone was honored with the Excellence in Training & Consulting Award, recognizing its outstanding impact in professional development. With a proven track record of empowering organizations and individuals alike, WiseZone continues to deliver transformative learning experiences and high-value consultancy services across diverse industries.",
+    "latestUpdates": "Latest Updates",
+    "viewAll": "View All News",
+    "emptyState": {
+      "title": "No News Available",
+      "description": "Check back later for updates."
+    },
+    "placeholders": {
+      "module": "News",
+      "date": "Coming Soon",
+      "untitled": "Untitled",
+      "noContent": "No content available."
+    },
+    "aria": {
+      "expand": "Expand news",
+      "collapse": "Collapse news"
+    }
+  },
+  "PartnersSlider": {
+    "title": "Our Partners",
+    "cta": {
+      "question": "Interested in partnering with us?",
+      "button": "Become a Partner"
+    },
+    "placeholders": {
+      "defaultDescription": "Strategic Partner"
+    }
+  },
+  "Banner": {
+    "title": "Our Courses",
+    "description": "Glimpses of our journey in developing skills and creating success."
+  },
+  "CourseCard": {
+    "labels": {
+      "course": "Course",
+      "details": "Course Details"
+    },
+    "aria": {
+      "expand": "Expand course details",
+      "collapse": "Collapse course details"
+    }
+  },
+  "CourseList": {
+    "viewAll": "View All Courses",
+    "showingCount": "Showing {count} of {total} courses"
+  },
+  "CoursesPage": {
+    "emptyState": {
+      "title": "No Courses Available",
+      "description": "Check back soon for new course offerings.",
+      "button": "Get Notified"
+    },
+    "loading": "Loading courses...",
+    "errorPrefix": "Error: "
+  },
+  "StyledGoogleMap": {
+    "title": "Find Our",
+    "titleHighlight": "Campus",
+    "description": "Visit our state-of-the-art training center in the heart of Amman. We're easily accessible and ready to welcome you for transformative learning experiences.",
+    "loading": "Loading interactive map...",
+    "navigation": "Start Navigation",
+    "infoWindow": {
+      "companyName": "Wise Zone",
+      "subTitle": "Training & Consulting",
+      "address": "Yajouz Road, Rabbath Ammon",
+      "country": "Jordan",
+      "getDirections": "Get Directions"
+    }
+  },
+  "HowWeWork": {
+    "title": "How We Work",
+    "subtitle": "A clear, structured approach built on expertise and clarity.",
+    "steps": {
+      "diagnose": {
+        "title": "Diagnose",
+        "description": "Understanding challenges before giving advice."
+      },
+      "design": {
+        "title": "Design",
+        "description": "Tailored guidance based on real needs."
+      },
+      "engage": {
+        "title": "Engage",
+        "description": "Interactive consulting and practical training."
+      },
+      "measure": {
+        "title": "Measure",
+        "description": "Ensuring impact that lasts beyond sessions."
+      }
+    }
+  },
+  "MainServices": {
+    "title": "Our Services",
+    "description": "Glimpses of our journey in developing skills and creating success.",
+    "categories": {
+      "consultation": {
+        "title": "Consultation",
+        "items": [
+          "HR Consultancy",
+          "Financial Consultancy",
+          "Marketing Consultancy",
+          "Project Management",
+          "Managerial Consultancy",
+          "Legal Consultancies",
+          "Business Consultancy"
+        ]
+      },
+      "businessSolution": {
+        "title": "Business Solution",
+        "items": [
+          "TNA Solutions",
+          "HR Solutions",
+          "CRM Systems",
+          "Online Training"
+        ]
+      },
+      "onlineServices": {
+        "title": "Online Services",
+        "items": [
+          "Online Training",
+          "HR Solutions",
+          "HR Outsourcing",
+          "Online Advisory",
+          "Recruitment Services"
+        ]
+      },
+      "recruitment": {
+        "title": "Recruitment Service",
+        "items": [
+          "Head Hunting",
+          "Executive Search",
+          "Career Counseling",
+          "Testing, Evaluation, and Interviewing"
+        ]
+      },
+      "conference": {
+        "title": "Conference Service",
+        "items": [
+          "Events & Conferences Planning",
+          "Events & Conferences Execution",
+          "Client Relationship Management",
+          "Events & Conferences Coordination",
+          "Events & Conferences Implicated Services, Translations and Editing",
+          "Events & Conferences Supplies and Procurement",
+          "Events & Conferences Promotion",
+          "Media and Publication Management"
+        ]
+      },
+      "students": {
+        "title": "Students Services",
+        "items": ["On-site Training", "On-job Training"]
+      }
+    }
+  },
+  "ProofOfCredibility": {
+    "title": "Why Organizations Trust Us",
+    "subtitle": "Our credibility is built on expertise, real-world experience, and sustainable impact.",
+    "cards": {
+      "expert": {
+        "title": "Expert-Led Consulting & Training",
+        "text": "All engagements are led by experienced professionals, not generic facilitators."
+      },
+      "experience": {
+        "title": "Practical Institutional Experience",
+        "text": "Grounded in real organizational challenges across multiple sectors."
+      },
+      "custom": {
+        "title": "Customized Approach",
+        "text": "No templates or assumptions. Every engagement is context-aware and tailored."
+      },
+      "sustainable": {
+        "title": "Sustainable Impact",
+        "text": "We measure success by what lasts beyond the sessions."
+      }
+    }
+  },
+  "WhyChooseUs": {
+    "title": "Why Choose Us ?",
+    "description": "Because expertise, clarity, and impact make the difference.",
+    "cards": {
+      "expert": {
+        "title": "Expert-Led Consulting & Training",
+        "description": "We deliver practical consulting and training solutions led by experienced professionals who understand real business challenges and provide actionable insights."
+      },
+      "customized": {
+        "title": "Customized Solutions",
+        "description": "Our services are tailored to your organization’s specific needs, ensuring strategies and training programs that align perfectly with your goals and industry."
+      },
+      "methodologies": {
+        "title": "Proven Methodologies",
+        "description": "We apply tested frameworks and best practices that drive measurable improvement in performance, efficiency, and decision-making."
+      },
+      "impact": {
+        "title": "Sustainable Impact",
+        "description": "Our focus goes beyond short-term results. We build long-term capabilities within your team to ensure continuous growth and lasting success."
+      }
+    }
+  }
+}
