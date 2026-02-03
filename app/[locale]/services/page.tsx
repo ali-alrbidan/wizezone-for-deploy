@@ -1,201 +1,5 @@
-// "use client";
-// import { HowWeWorkSection } from "./HowWeWork";
-// import { ProofOfCredibilitySection } from "./ProofOfCredibilitySection";
-// import { ServiceCard } from "./ServiceCard";
-// import WhyChooseUs from "./WhyChooseUs";
-// import { motion } from "framer-motion";
-
-// export default function MainOurService() {
-//   return (
-//     <section className="mt-6 space-y-4 dark:bg-zinc-900">
-//       <div className="mx-auto flex justify-center items-center py-10">
-//         <motion.div className=" inline-block text-center">
-//           <motion.h1
-//             className="relative text-xl md:text-4xl font-bold bg-gradient-to-b dark:from-white dark:to-white/70 from-zinc-900 to-zinc-600 bg-clip-text text-transparent  z-10"
-//             initial={{ y: 30, opacity: 0 }}
-//             whileInView={{ y: 0, opacity: 1 }}
-//             viewport={{ once: true }}
-//             transition={{ duration: 0.8, delay: 0.2 }}
-//           >
-//             Our Services{" "}
-//             <motion.div
-//               className="absolute -bottom-3 left-1/4 right-1/4 h-[3px] bg-gradient-to-r from-transparent via-primary/80 to-transparent"
-//               initial={{ scaleX: 0, opacity: 0 }}
-//               whileInView={{ scaleX: 1, opacity: 1 }}
-//               viewport={{ once: true }}
-//               transition={{ duration: 0.6, delay: 0.6 }}
-//             />
-//           </motion.h1>{" "}
-//           <motion.p
-//             initial={{ y: 30, opacity: 0 }}
-//             whileInView={{ y: 0, opacity: 1 }}
-//             viewport={{ once: true }}
-//             transition={{ duration: 0.8, delay: 0.8 }}
-//             className="text-sm  text-zinc-500 dark:text-white/60 mb-12 mt-6 sm:text-md"
-//           >
-//             Glimpses of our journey in developing skills and creating success.
-//           </motion.p>
-//         </motion.div>
-//       </div>
-//       {/* Grid */}
-//       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-4 items-stretch">
-//         {/* left */}
-//         <div className="flex flex-col gap-2 h-full">
-//           <ServiceCard
-//             motionProps={{
-//               initial: { opacity: 0, y: 20 },
-//               whileInView: { opacity: 1, y: 0 },
-//               transition: {
-//                 type: "spring",
-//                 stiffness: 100,
-//                 damping: 15,
-//                 delay: 0.2,
-//               },
-//             }}
-//             title="Consultation"
-//             items={[
-//               "HR Consultancy",
-//               "Financial Consultancy",
-//               "Marketing Consultancy",
-//               "Project Management",
-//               "Managerial Consultancy",
-//               "Legal Consultancies",
-//               "Business Consultancy",
-//             ]}
-//           />
-
-//           <ServiceCard
-//             motionProps={{
-//               initial: { opacity: 0, y: 20 },
-//               whileInView: { opacity: 1, y: 0 },
-//               transition: {
-//                 type: "spring",
-//                 stiffness: 100,
-//                 damping: 15,
-//                 delay: 0.2,
-//               },
-//             }}
-//             title="Business Solution"
-//             items={[
-//               "TNA Solutions",
-//               "HR Solutions",
-//               "CRM Systems",
-//               "Online Training",
-//             ]}
-//           />
-
-//           <ServiceCard
-//             motionProps={{
-//               initial: { opacity: 0, y: 20 },
-//               whileInView: { opacity: 1, y: 0 },
-//               transition: {
-//                 type: "spring",
-//                 stiffness: 100,
-//                 damping: 15,
-//                 delay: 0.2,
-//               },
-//             }}
-//             title="Online Services"
-//             items={[
-//               "Online Training",
-//               "HR Solutions",
-//               "HR Outsourcing",
-//               "Online Advisory",
-//               "Recruitment Services",
-//             ]}
-//           />
-//         </div>
-
-//         {/* center image */}
-//         <div className="relative flex justify-center h-full">
-//           <div className="relative rounded-2xl overflow-hidden border  p-6 h-full w-full">
-//             <img
-//               src="/services.png"
-//               alt="Services"
-//               className="w-full h-full object-cover rounded-xl"
-//             />
-//           </div>
-//         </div>
-
-//         {/* right */}
-//         <div className="flex flex-col gap-2 h-full">
-//           <ServiceCard
-//             motionProps={{
-//               initial: { opacity: 0, y: 20 },
-//               whileInView: { opacity: 1, y: 0 },
-//               transition: {
-//                 type: "spring",
-//                 stiffness: 100,
-//                 damping: 15,
-//                 delay: 0.2,
-//               },
-//             }}
-//             title="Recruitment Service"
-//             items={[
-//               "Head Hunting",
-//               "Executive Search",
-//               "Career Counseling",
-//               "Testing, Evaluation, and Interviewing",
-//             ]}
-//           />
-
-//           <ServiceCard
-//             motionProps={{
-//               initial: { opacity: 0, y: 20 },
-//               whileInView: { opacity: 1, y: 0 },
-//               transition: {
-//                 type: "spring",
-//                 stiffness: 100,
-//                 damping: 15,
-//                 delay: 0.2,
-//               },
-//             }}
-//             title="Conference Service"
-//             items={[
-//               "Events & Conferences Planning",
-//               "Events & Conferences Execution",
-//               "Client Relationship Management.",
-//               "Events & Conferences Coordination",
-//               "Events & Conferences Implicated Services, Translations and Editing.",
-//               "Events & Conferences Supplies and Procurement.",
-//               "Events & Conferences Promotion.",
-//               "Media and Publication Management.",
-//             ]}
-//           />
-
-//           <ServiceCard
-//             motionProps={{
-//               initial: { opacity: 0, y: 20 },
-//               whileInView: { opacity: 1, y: 0 },
-//               transition: {
-//                 type: "spring",
-//                 stiffness: 100,
-//                 damping: 15,
-//                 delay: 0.2,
-//               },
-//             }}
-//             title="Students Services"
-//             items={["On-site Training", "On-job Training"]}
-//           />
-//         </div>
-//       </div>
-
-//       <div>
-//         <WhyChooseUs />
-
-//         <div>
-//           <HowWeWorkSection />
-//         </div>
-
-//         <div>
-//           <ProofOfCredibilitySection />
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
 "use client";
+import Image from "next/image";
 import { HowWeWorkSection } from "./HowWeWork";
 import { ProofOfCredibilitySection } from "./ProofOfCredibilitySection";
 import { ServiceCard } from "./ServiceCard";
@@ -205,7 +9,7 @@ import { useTranslations } from "next-intl";
 
 export default function MainOurService() {
   const t = useTranslations("MainServices");
-  
+
   const leftCardDelays = [0, 0.2, 0.4];
   const rightCardDelays = [0, 0.2, 0.4];
 
@@ -326,15 +130,21 @@ export default function MainOurService() {
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           >
-            <motion.img
-              src="/services.png"
-              alt="Services"
-              className="w-full h-full object-cover rounded-xl -mt-20"
+            <motion.div
+              className="w-full h-full rounded-xl -mt-20 overflow-hidden"
               initial={{ scale: 1.1 }}
               whileInView={{ scale: 1 }}
               transition={{ duration: 1.2, ease: "easeOut" }}
-            />
-            {/* Subtle gradient overlay */}
+            >
+              <Image
+                src="/services.png"
+                alt="Services"
+                fill
+                className="object-cover"
+                sizes="30vw"
+                priority={false}
+              />
+            </motion.div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent rounded-xl" />
           </motion.div>
         </motion.div>
