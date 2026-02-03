@@ -73,10 +73,9 @@ shadow-sm group-hover:shadow-md
                     <Image
                       src={item.LogoUrl}
                       alt={item.EnName}
-                      width={240}
-                      height={140}
+                      width={200}
+                      height={200}
                       className="max-sm:p-3 object-contain transition-transform duration-300 group-hover:scale-105"
-                      unoptimized
                     />
                   ) : (
                     <span className=" text-sm">No Logo</span>
