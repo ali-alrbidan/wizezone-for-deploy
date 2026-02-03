@@ -113,40 +113,26 @@ export default function MainOurService() {
           ))}
         </div>
 
-        {/* Center Image */}
         <motion.div
-          className="relative flex justify-start items-start h-full"
-          initial={{ opacity: 0, scale: 0.9, y: 20 }}
-          whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{
-            duration: 0.9,
-            delay: 0.4,
-            ease: [0.16, 1, 0.3, 1],
-          }}
+          className="relative h-full"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9, delay: 0.4 }}
         >
-          <motion.div
-            className="relative rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 p-4 sm:p-6 h-full w-full"
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.3 }}
-          >
-            <motion.div
-              className="w-full h-full rounded-xl -mt-20 overflow-hidden"
-              initial={{ scale: 1.1 }}
-              whileInView={{ scale: 1 }}
-              transition={{ duration: 1.2, ease: "easeOut" }}
-            >
+          <div className="relative rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 p-4 sm:p-6 h-full">
+            <div className="relative h-64 md:h-96 lg:h-full -m-20">
               <Image
-                src="/Services.png"
-                alt="Services"
+                src="/Services.png" // Note: Capital S if your file is "Services.png"
+                alt="Our Services"
                 fill
-                className="object-cover"
-                sizes="30vw"
+                className="object-cover rounded-lg"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 priority={false}
               />
-            </motion.div>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent rounded-xl" />
-          </motion.div>
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-xl" />
+          </div>
         </motion.div>
 
         {/* Right Column - Cards enter from right with stagger */}
