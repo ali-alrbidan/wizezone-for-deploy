@@ -13,14 +13,14 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: '**', // Allow all images for now
+        hostname: '**',
       },
     ],
   },
-    // Add trailing slash for better compatibility
+   
   trailingSlash: false,
   
-  // Skip type checking during build (if needed)
+
   typescript: {
     ignoreBuildErrors: false,
   },
