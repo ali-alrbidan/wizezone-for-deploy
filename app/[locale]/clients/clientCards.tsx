@@ -7,11 +7,13 @@ import { useLocale } from "next-intl";
 import { ClientApi } from "../types";
 export default function ClientsCard() {
   const [clients, setClients] = useState<ClientApi[]>();
+  const locale = useLocale();
 
   useEffect(() => {
     async function getClients() {
       const response = await fetch("/api/clients");
       const data = await response.json();
+
       setClients(data);
     }
     getClients();
@@ -94,7 +96,7 @@ shadow-sm group-hover:shadow-md
                             
                                 "
                 >
-                  {useLocale() === "ar" ? item.ArName : item.EnName}
+                  {locale === "ar" ? item.ArName : item.EnName}
                 </h3>
 
                 {/* Accent Line */}

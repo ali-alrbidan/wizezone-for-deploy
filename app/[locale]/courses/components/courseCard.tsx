@@ -17,7 +17,7 @@ export default function CourseCard({
 }: CourseCardProps) {
   const t = useTranslations("CourseCard");
   const isOpen = openId === item.id;
-
+  const locale = useLocale();
   return (
     <motion.div
       layout
@@ -64,7 +64,7 @@ export default function CourseCard({
             {t("labels.course")}
           </motion.p>
           <h3 className="text-gray-900 dark:text-white text-xl font-semibold leading-tight">
-            {useLocale() === "ar" ? item.titleAr : item.titleEn}
+            {locale === "ar" ? item.titleAr : item.titleEn}
           </h3>
 
           <motion.div
@@ -160,7 +160,7 @@ export default function CourseCard({
               </div>
 
               <ul className="space-y-3">
-                {(useLocale() === "ar"
+                {(locale === "ar"
                   ? item.descriptionAr
                   : item.descriptionEn
                 ).map((description, index) => (

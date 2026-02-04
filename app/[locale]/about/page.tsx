@@ -3,16 +3,14 @@ import { motion } from "framer-motion";
 import { useLocale, useTranslations } from "next-intl";
 const Page = () => {
   const t = useTranslations("AboutPage");
-  const text = useLocale() === "ar" ? "وايز زون" : "Wise Zone";
+  const locale = useLocale();
+  const text = locale == "ar" ? "وايز زون" : "Wise Zone";
   const letters =
-    useLocale() === "ar"
-      ? ["و", "ا", "يز", " ", "ز", "و", "ن"]
-      : text.split("");
-  // const letters = text.split("");
+    locale === "ar" ? ["و", "ا", "يز", " ", "ز", "و", "ن"] : text.split("");
+
   return (
     <main className="pt-32 pb-20 max-sm:pb-10 max-sm:pt-20">
       <div className="max-w-7xl mx-auto px-6 space-y-32 max-sm:space-y-16">
-        {/* ================= Hero ================= */}
         <section className="text-center max-w-4xl mx-auto">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -20,7 +18,7 @@ const Page = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-[26px] md:text-3xl font-bold mb-6"
           >
-            <span>{useLocale() === "ar" ? "حول" : "About"} </span>
+            <span>{locale === "ar" ? "حول" : "About"} </span>
             <span className="text-primary">
               {letters.map((letter, index) => (
                 <motion.span
@@ -45,7 +43,7 @@ const Page = () => {
                 </motion.span>
               ))}
             </span>
-            {/* <span>{useLocale() === "ar" ? " (Wise zone)" : ""} </span> */}
+            {/* <span>{locale === "ar" ? " (Wise zone)" : ""} </span> */}
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -341,11 +339,12 @@ const Page = () => {
         {/* ================= CTA ================= */}
         <section className="text-center">
           <div className="flex justify-center items-center">
-            {(useLocale() === "ar"
+            {(locale === "ar"
               ? ["دعنا", "نبدأ", "ب", "حوار"]
               : ["Let's ", "start ", "with ", "a ", "conversation "]
             ).map((item, index) => (
               <motion.h2
+                key={index}
                 initial={{ y: index % 2 === 0 ? 20 : -20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4, duration: 0.9 }}
